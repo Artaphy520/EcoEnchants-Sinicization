@@ -1,0 +1,26 @@
+display-name: "木工"
+description: "获得的『伐木』经验增加 &a%placeholder%%"
+placeholder: "4 * %level%"
+type: normal
+
+targets:
+  - axe
+conflicts: [ ]
+rarity: uncommon
+max-level: 4
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: skill_xp_multiplier
+    args:
+      multiplier: "1 + 0.04 * %level%"
+      skills:
+        - woodcutting
+
+conditions: [ ]
+
+dependencies:
+  - EcoSkills
